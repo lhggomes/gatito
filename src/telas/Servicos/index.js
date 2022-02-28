@@ -31,8 +31,9 @@ export default function Servicos(){
             <StatusBar/>
             <Text>Serviços</Text>
             <FlatList data={servicos}
+             removeClippedSubviews={false}
              renderItem={({item}) =>  <Item {...item}/>} 
-             keyExtractor={(id) => String(id)}>
+             keyExtractor={({id}) => String(id)}>
 
             </FlatList>
         </SafeAreaView>
